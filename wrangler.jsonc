@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "appzed-security-agent",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-01",
+  "ai": {
+    "binding": "AI"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "appzed-security-agent-db"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "30 6 * * *"
+    ]
+  }
+}
